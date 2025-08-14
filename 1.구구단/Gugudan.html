@@ -15,6 +15,7 @@
         <button type="submit">입력</button>
     </form>
     <div id="result">{{result}}</div>
+    <div> {{value}} </div>
 </div>
 <script>
   const app = new Vue({
@@ -28,6 +29,7 @@
     methods: {
       onSubmitForm(e) {
         e.preventDefault();
+        console.log(this);
         if (this.first * this.second === parseInt(this.value)) {
           this.result = '정답';
           this.first = Math.ceil(Math.random() * 9);
